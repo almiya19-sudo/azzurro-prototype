@@ -1,262 +1,250 @@
-/* === ИСПРАВЛЕННЫЙ БАННЕР === */
-.hero-banner {
-    background: linear-gradient(135deg, #003366 0%, #002244 100%);
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azzurro Trade - Яхтенный сервис</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="200" height="50" viewBox="0 0 200 50">
+                    <rect width="200" height="50" fill="#003366" rx="5"/>
+                    <text x="15" y="32" fill="#FF6B35" font-family="Arial" font-size="20" font-weight="bold">AZZURRO</text>
+                    <text x="115" y="32" fill="#FFFFFF" font-family="Arial" font-size="16">TRADE</text>
+                </svg>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="active">Главная</a>
+                <a href="service.html">Сервис</a>
+                <a href="engineering.html">Проектирование</a>
+                <a href="brokerage.html">Брокераж</a>
+                <a href="supply.html">Снабжение</a>
+                <a href="emergency.html" class="emergency-link">Срочный выезд</a>
+            </nav>
+            <div class="contacts">
+                <a href="tel:+79780882345" class="phone">+7 (978) 088-23-45</a>
+            </div>
+        </div>
+    </header>
 
-.banner-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
+    <main>
+        <!-- ИСПРАВЛЕННЫЙ БАННЕР -->
+        <section class="hero-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h1 class="banner-title">
+                        <span class="azzurro-text">АЗЗУРРО</span>
+                        <span class="group-text">ГРУПП</span>
+                    </h1>
+                    <p class="banner-subtitle">РАЗРАБАТЫВАЕМ И УЛУЧШАЕМ</p>
+                    <div class="banner-features">
+                        <div class="feature-item">⚙️ Высокотехнологичный сервис</div>
+                        <div class="feature-item">🔧 Обслуживание двигателей внутреннего сгорания</div>
+                        <div class="feature-item">💻 Ремонт сложной электроники</div>
+                        <div class="feature-item">🛠️ Ремонт и восстановление машин и механизмов</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.banner-title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 64px;
-    font-weight: 800;
-    margin-bottom: 15px;
-    letter-spacing: 6px;
-    line-height: 1.2;
-}
+        <!-- СТАТИСТИКА -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">станков</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">станков с ЧПУ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">автомобилей и АПУ</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label">сервисных контрактов в год</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.azzurro-text {
-    color: #FFFFFF;
-}
+        <!-- ИСПРАВЛЕННАЯ КАРТА -->
+        <section class="map-section">
+            <div class="container">
+                <h2>География работ</h2>
+                <p class="map-subtitle">Работаем по всей России</p>
+                
+                <div class="russia-map-simple">
+                    <!-- Точки на карте -->
+                    <div class="map-point" style="left: 15%; top: 45%;" data-city="Калининград">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Калининград</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 42%; top: 75%;" data-city="Севастополь">
+                        <div class="point-marker main-point"></div>
+                        <span class="point-label">Севастополь</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 48%; top: 72%;" data-city="Краснодар">
+                        <div class="point-marker main-point"></div>
+                        <span class="point-label">Краснодар</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 50%; top: 70%;" data-city="Темрюк">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Темрюк</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 52%; top: 74%;" data-city="Сочи">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Сочи</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 85%; top: 85%;" data-city="Невельск">
+                        <div class="point-marker main-point"></div>
+                        <span class="point-label">Невельск</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 90%; top: 25%;" data-city="Чукотка">
+                        <div class="point-marker main-point"></div>
+                        <span class="point-label">Чукотка</span>
+                    </div>
+                    
+                    <!-- Дополнительные 8 регионов -->
+                    <div class="map-point" style="left: 40%; top: 50%;" data-city="Москва">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Москва</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 35%; top: 35%;" data-city="СПб">
+                        <div class="point-marker"></div>
+                        <span class="point-label">СПб</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 65%; top: 55%;" data-city="Новосибирск">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Новосибирск</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 82%; top: 80%;" data-city="Владивосток">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Владивосток</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 32%; top: 22%;" data-city="Мурманск">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Мурманск</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 38%; top: 30%;" data-city="Архангельск">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Архангельск</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 55%; top: 62%;" data-city="Волгоград">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Волгоград</span>
+                    </div>
+                    
+                    <div class="map-point" style="left: 75%; top: 60%;" data-city="Иркутск">
+                        <div class="point-marker"></div>
+                        <span class="point-label">Иркутск</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.group-text {
-    color: #FF6B35;
-    margin-left: 15px;
-}
+        <!-- УСЛУГИ -->
+        <section class="services-preview">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="services-grid">
+                    <a href="service.html" class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Сервисное обслуживание</h3>
+                        <p>Ремонт двигателей, оборудования, консервация</p>
+                    </a>
+                    <a href="engineering.html" class="service-card">
+                        <div class="service-icon">📐</div>
+                        <h3>Проектирование</h3>
+                        <p>Инжиниринг, модернизация, дизайн интерьеров</p>
+                    </a>
+                    <a href="brokerage.html" class="service-card">
+                        <div class="service-icon">⚓</div>
+                        <h3>Брокераж</h3>
+                        <p>Покупка, продажа, оценка яхт</p>
+                    </a>
+                    <a href="supply.html" class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Снабжение</h3>
+                        <p>Запчасти, оборудование, расходники</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-.banner-subtitle {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 12px;
-    color: #FFFFFF;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
+        <!-- ИСПРАВЛЕННЫЕ КЛИЕНТЫ -->
+        <section class="clients-section">
+            <div class="container">
+                <h2>Наши клиенты</h2>
+                <div class="clients-grid">
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Emblem_of_the_National_Guard_of_Russia.svg/1200px-Emblem_of_the_National_Guard_of_Russia.svg.png" alt="Росгвардия">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Emblem_of_the_Ministry_of_Emergency_Situations_of_Russia.svg/1200px-Emblem_of_the_Ministry_of_Emergency_Situations_of_Russia.svg.png" alt="МЧС России">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Almaz_logo.png/640px-Almaz_logo.png" alt="Алмаз">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Rybinsk_shipyard_logo.png/640px-Rybinsk_shipyard_logo.png" alt="Рыбинская верфь">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Zaliv_shipyard_logo.png/640px-Zaliv_shipyard_logo.png" alt="Залив">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Lukoil_logo.svg/1200px-Lukoil_logo.svg.png" alt="Лукойл">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Kalashnikov_Concern_logo.png/640px-Kalashnikov_Concern_logo.png" alt="Калашников">
+                    </div>
+                    <div class="client-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/CNPC_Logo.svg/1200px-CNPC_Logo.svg.png" alt="CNPC">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.banner-features {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: left;
-}
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Тел: +7 (978) 088-23-45</p>
+                    <p>Email: trade@azzurro-online.com</p>
+                    <p>Севастополь, Крым</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <a href="https://vk.com/azzurrogroup" target="_blank" class="social-link">VK</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Azzurro Trade. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
 
-.feature-item {
-    font-size: 16px;
-    padding: 12px 20px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 6px;
-    border-left: 3px solid #FF6B35;
-}
-
-/* === СТАТИСТИКА (компактнее) === */
-.stats-section {
-    padding: 40px 0;
-    background: #f8f9fa;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    text-align: center;
-}
-
-.stat-item {
-    padding: 20px;
-}
-
-.stat-number {
-    font-size: 48px;
-    font-weight: 800;
-    color: #003366;
-    line-height: 1;
-    margin-bottom: 5px;
-}
-
-.stat-label {
-    font-size: 16px;
-    color: #666;
-}
-
-/* === ИСПРАВЛЕННАЯ КАРТА === */
-.map-section {
-    padding: 60px 0;
-    background: white;
-    text-align: center;
-}
-
-.map-section h2 {
-    font-size: 32px;
-    color: #003366;
-    margin-bottom: 10px;
-}
-
-.map-subtitle {
-    color: #666;
-    margin-bottom: 30px;
-}
-
-.russia-map-simple {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    height: 400px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
-    border-radius: 15px;
-    border: 2px solid #003366;
-    overflow: hidden;
-}
-
-.russia-map-simple::before {
-    content: 'РОССИЯ';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: rgba(0,51,102,0.05);
-    font-weight: 800;
-    letter-spacing: 20px;
-}
-
-.map-point {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.point-marker {
-    width: 12px;
-    height: 12px;
-    background: #003366;
-    border-radius: 50%;
-    border: 2px solid white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    animation: pulse 2s infinite;
-}
-
-.point-marker.main-point {
-    width: 16px;
-    height: 16px;
-    background: #FF6B35;
-}
-
-.point-label {
-    margin-top: 5px;
-    font-size: 11px;
-    color: #003366;
-    font-weight: 600;
-    background: rgba(255,255,255,0.9);
-    padding: 2px 6px;
-    border-radius: 3px;
-    white-space: nowrap;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.2); opacity: 0.8; }
-}
-
-/* === ИСПРАВЛЕННЫЕ КЛИЕНТЫ === */
-.clients-section {
-    padding: 60px 0;
-    background: #f0f4f8;
-}
-
-.clients-section h2 {
-    text-align: center;
-    font-size: 32px;
-    color: #003366;
-    margin-bottom: 40px;
-}
-
-.clients-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-items: center;
-}
-
-.client-logo {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    transition: all 0.3s;
-}
-
-.client-logo:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.client-logo img {
-    max-width: 100%;
-    max-height: 70px;
-    object-fit: contain;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .banner-title {
-        font-size: 36px;
-        letter-spacing: 3px;
-    }
-    
-    .group-text {
-        display: block;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    
-    .banner-subtitle {
-        font-size: 16px;
-        letter-spacing: 6px;
-    }
-    
-    .banner-features {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .clients-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .russia-map-simple {
-        height: 300px;
-    }
-    
-    .point-label {
-        font-size: 9px;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .clients-grid {
-        grid-template-columns: 1fr;
-    }
-}
+    <script src="js/main.js"></script>
+</body>
+</html>
