@@ -1,260 +1,262 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azzurro Trade - Яхтенный сервис</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <svg width="220" height="60" viewBox="0 0 220 60">
-                    <rect width="220" height="60" fill="#003366" rx="5"/>
-                    <text x="20" y="38" fill="#FF6B35" font-family="Montserrat" font-size="24" font-weight="800">AZZURRO</text>
-                    <text x="135" y="38" fill="#FFFFFF" font-family="Montserrat" font-size="20" font-weight="600">TRADE</text>
-                </svg>
-            </div>
-            <nav class="nav">
-                <a href="index.html" class="active">Главная</a>
-                <a href="service.html">Сервис</a>
-                <a href="engineering.html">Проектирование</a>
-                <a href="brokerage.html">Брокераж</a>
-                <a href="supply.html">Снабжение</a>
-                <a href="emergency.html" class="emergency-link">Срочный выезд</a>
-            </nav>
-            <div class="contacts">
-                <a href="tel:+79780882345" class="phone">+7 (978) 088-23-45</a>
-            </div>
-        </div>
-    </header>
+/* === ИСПРАВЛЕННЫЙ БАННЕР === */
+.hero-banner {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
 
-    <main>
-        <!-- НОВЫЙ БАННЕР -->
-        <section class="hero-banner">
-            <div class="container">
-                <div class="banner-content">
-                    <h1 class="banner-title">
-                        <span class="azzurro-text">АЗЗУРРО</span>
-                        <span class="group-text">ГРУПП</span>
-                    </h1>
-                    <p class="banner-subtitle">РАЗРАБАТЫВАЕМ И УЛУЧШАЕМ</p>
-                    <div class="banner-features">
-                        <div class="feature-item">⚙️ Высокотехнологичный сервис</div>
-                        <div class="feature-item">🔧 Обслуживание двигателей внутреннего сгорания</div>
-                        <div class="feature-item">💻 Ремонт сложной электроники</div>
-                        <div class="feature-item">🛠️ Ремонт и восстановление машин и механизмов</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+.banner-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-        <!-- СТАТИСТИКА -->
-        <section class="stats-section">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-number">16</div>
-                        <div class="stat-label">станков</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">станков с ЧПУ</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">автомобилей и АПУ</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">300+</div>
-                        <div class="stat-label">сервисных контрактов в год</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+.banner-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: 6px;
+    line-height: 1.2;
+}
 
-        <!-- SVG КАРТА РОССИИ -->
-        <section class="map-section">
-            <div class="container">
-                <h2>География работ</h2>
-                <p class="map-subtitle">Работаем по всей России</p>
-                
-                <div class="russia-map-container">
-                    <svg viewBox="0 0 1000 600" class="russia-svg">
-                        <!-- Фон карты -->
-                        <rect width="1000" height="600" fill="#f0f4f8"/>
-                        
-                        <!-- Упрощённый контур России (основные регионы) -->
-                        <path d="M 150 450 L 200 400 L 250 380 L 300 350 L 350 320 L 400 300 L 450 280 L 500 260 L 550 240 L 600 220 L 650 200 L 700 180 L 750 160 L 800 140 L 850 120 L 900 100 L 920 120 L 900 150 L 880 180 L 860 210 L 840 240 L 820 270 L 800 300 L 780 330 L 760 360 L 740 390 L 720 420 L 700 450 L 680 480 L 660 510 L 640 540 L 620 570 L 600 580 L 550 570 L 500 560 L 450 550 L 400 540 L 350 530 L 300 520 L 250 510 L 200 500 L 150 490 Z" 
-                              fill="#e1e8ed" stroke="#003366" stroke-width="2"/>
-                        
-                        <!-- Калининградская область -->
-                        <circle cx="120" cy="420" r="8" fill="#FF6B35" class="map-point" data-region="Калининград"/>
-                        <text x="120" y="445" text-anchor="middle" font-size="12" fill="#003366" font-weight="600">Калининград</text>
-                        
-                        <!-- Севастополь (Крым) -->
-                        <circle cx="380" cy="480" r="8" fill="#FF6B35" class="map-point" data-region="Севастополь"/>
-                        <text x="380" y="505" text-anchor="middle" font-size="12" fill="#003366" font-weight="600">Севастополь</text>
-                        
-                        <!-- Краснодар -->
-                        <circle cx="420" cy="460" r="8" fill="#FF6B35" class="map-point" data-region="Краснодар"/>
-                        <text x="420" y="485" text-anchor="middle" font-size="12" fill="#003366" font-weight="600">Краснодар</text>
-                        
-                        <!-- Темрюк -->
-                        <circle cx="440" cy="450" r="6" fill="#003366" class="map-point" data-region="Темрюк"/>
-                        <text x="440" y="435" text-anchor="middle" font-size="11" fill="#003366">Темрюк</text>
-                        
-                        <!-- Сочи -->
-                        <circle cx="460" cy="470" r="6" fill="#003366" class="map-point" data-region="Сочи"/>
-                        <text x="460" y="490" text-anchor="middle" font-size="11" fill="#003366">Сочи</text>
-                        
-                        <!-- Невельск (Сахалин) -->
-                        <circle cx="880" cy="520" r="8" fill="#FF6B35" class="map-point" data-region="Невельск"/>
-                        <text x="880" y="545" text-anchor="middle" font-size="12" fill="#003366" font-weight="600">Невельск</text>
-                        
-                        <!-- Чукотка -->
-                        <circle cx="920" cy="150" r="8" fill="#FF6B35" class="map-point" data-region="Чукотка"/>
-                        <text x="920" y="175" text-anchor="middle" font-size="12" fill="#003366" font-weight="600">Чукотка</text>
-                        
-                        <!-- Дополнительные 8 регионов (рандом) -->
-                        <!-- Москва -->
-                        <circle cx="380" cy="320" r="6" fill="#003366" class="map-point" data-region="Москва"/>
-                        <text x="380" y="305" text-anchor="middle" font-size="11" fill="#003366">Москва</text>
-                        
-                        <!-- Санкт-Петербург -->
-                        <circle cx="320" cy="280" r="6" fill="#003366" class="map-point" data-region="Санкт-Петербург"/>
-                        <text x="320" y="265" text-anchor="middle" font-size="11" fill="#003366">СПб</text>
-                        
-                        <!-- Новосибирск -->
-                        <circle cx="650" cy="350" r="6" fill="#003366" class="map-point" data-region="Новосибирск"/>
-                        <text x="650" y="335" text-anchor="middle" font-size="11" fill="#003366">Новосибирск</text>
-                        
-                        <!-- Владивосток -->
-                        <circle cx="850" cy="480" r="6" fill="#003366" class="map-point" data-region="Владивосток"/>
-                        <text x="850" y="465" text-anchor="middle" font-size="11" fill="#003366">Владивосток</text>
-                        
-                        <!-- Мурманск -->
-                        <circle cx="280" cy="180" r="6" fill="#003366" class="map-point" data-region="Мурманск"/>
-                        <text x="280" y="165" text-anchor="middle" font-size="11" fill="#003366">Мурманск</text>
-                        
-                        <!-- Архангельск -->
-                        <circle cx="320" cy="220" r="6" fill="#003366" class="map-point" data-region="Архангельск"/>
-                        <text x="320" y="205" text-anchor="middle" font-size="11" fill="#003366">Архангельск</text>
-                        
-                        <!-- Волгоград -->
-                        <circle cx="480" cy="400" r="6" fill="#003366" class="map-point" data-region="Волгоград"/>
-                        <text x="480" y="385" text-anchor="middle" font-size="11" fill="#003366">Волгоград</text>
-                        
-                        <!-- Иркутск -->
-                        <circle cx="750" cy="380" r="6" fill="#003366" class="map-point" data-region="Иркутск"/>
-                        <text x="750" y="365" text-anchor="middle" font-size="11" fill="#003366">Иркутск</text>
-                        
-                        <!-- Линии связи между точками (опционально) -->
-                        <line x1="380" y1="480" x2="420" y2="460" stroke="#FF6B35" stroke-width="1" opacity="0.3"/>
-                        <line x1="420" y1="460" x2="440" y2="450" stroke="#FF6B35" stroke-width="1" opacity="0.3"/>
-                        <line x1="440" y1="450" x2="460" y2="470" stroke="#FF6B35" stroke-width="1" opacity="0.3"/>
-                    </svg>
-                </div>
-            </div>
-        </section>
+.azzurro-text {
+    color: #FFFFFF;
+}
 
-        <!-- УСЛУГИ -->
-        <section class="services-preview">
-            <div class="container">
-                <h2>Наши услуги</h2>
-                <div class="services-grid">
-                    <a href="service.html" class="service-card">
-                        <div class="service-icon">🔧</div>
-                        <h3>Сервисное обслуживание</h3>
-                        <p>Ремонт двигателей, оборудования, консервация</p>
-                    </a>
-                    <a href="engineering.html" class="service-card">
-                        <div class="service-icon">📐</div>
-                        <h3>Проектирование</h3>
-                        <p>Инжиниринг, модернизация, дизайн интерьеров</p>
-                    </a>
-                    <a href="brokerage.html" class="service-card">
-                        <div class="service-icon">⚓</div>
-                        <h3>Брокераж</h3>
-                        <p>Покупка, продажа, оценка яхт</p>
-                    </a>
-                    <a href="supply.html" class="service-card">
-                        <div class="service-icon">📦</div>
-                        <h3>Снабжение</h3>
-                        <p>Запчасти, оборудование, расходники</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+.group-text {
+    color: #FF6B35;
+    margin-left: 15px;
+}
 
-        <!-- НАШИ КЛИЕНТЫ -->
-        <section class="clients-section">
-            <div class="container">
-                <h2>Наши клиенты</h2>
-                <div class="clients-grid">
-                    <div class="client-logo">
-                        <img src="https://abali.ru/wp-content/uploads/2019/10/NationalGuardRussia.png" alt="Росгвардия" title="Росгвардия">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Emblem_of_the_Ministry_of_Emergency_Situations_of_Russia.svg/1200px-Emblem_of_the_Ministry_of_Emergency_Situations_of_Russia.svg.png" alt="МЧС России" title="МЧС России">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://петербург-заводской.рф/wp-content/uploads/logo_file-367.png" alt="Судостроительная фирма Алмаз" title="Судостроительная фирма Алмаз">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://paluba.media/wp-content/uploads/2021/03/74a9a60b-3f5f-46d6-a1ce-fd7d1312adab.jpg" alt="Рыбинская верфь" title="Рыбинская верфь">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://paluba.media/wp-content/uploads/2021/01/23803.png" alt="Судостроительный завод Залив" title="Судостроительный завод Залив">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://download.logo.wine/logo/Lukoil/Lukoil-Logo.wine.png" alt="Лукойл" title="Лукойл">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://ic.pics.livejournal.com/yarin_mikhail/23816327/868802/868802_600.png" alt="Концерн Калашников" title="Концерн Калашников">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://1000logos.net/wp-content/uploads/2020/06/CNPC-Logo.png" alt="CNPC Group" title="CNPC Group">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mriya_Resort_%26_SPA_logo.png/640px-Mriya_Resort_%26_SPA_logo.png" alt="Мрия Resort & SPA" title="Мрия Resort & SPA">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/SZ_More_logo.png/640px-SZ_More_logo.png" alt="СЗ Море" title="СЗ Море">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Shipyard_13_logo.png/640px-Shipyard_13_logo.png" alt="Судоремонтный завод 13" title="Судоремонтный завод 13">
-                    </div>
-                    <div class="client-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Vympel_shipyard_logo.png/640px-Vympel_shipyard_logo.png" alt="Вымпел" title="Вымпел">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+.banner-subtitle {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 12px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Контакты</h4>
-                    <p>Тел: +7 (978) 088-23-45</p>
-                    <p>Email: trade@azzurro-online.com</p>
-                    <p>Севастополь, Крым</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Мы в соцсетях</h4>
-                    <a href="https://vk.com/azzurrogroup" target="_blank" class="social-link">VK</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Azzurro Trade. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
+.banner-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
 
-    <script src="js/main.js"></script>
-</body>
-</html>
+.feature-item {
+    font-size: 16px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    border-left: 3px solid #FF6B35;
+}
+
+/* === СТАТИСТИКА (компактнее) === */
+.stats-section {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 16px;
+    color: #666;
+}
+
+/* === ИСПРАВЛЕННАЯ КАРТА === */
+.map-section {
+    padding: 60px 0;
+    background: white;
+    text-align: center;
+}
+
+.map-section h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.map-subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.russia-map-simple {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+    border-radius: 15px;
+    border: 2px solid #003366;
+    overflow: hidden;
+}
+
+.russia-map-simple::before {
+    content: 'РОССИЯ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: rgba(0,51,102,0.05);
+    font-weight: 800;
+    letter-spacing: 20px;
+}
+
+.map-point {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.point-marker {
+    width: 12px;
+    height: 12px;
+    background: #003366;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+.point-marker.main-point {
+    width: 16px;
+    height: 16px;
+    background: #FF6B35;
+}
+
+.point-label {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #003366;
+    font-weight: 600;
+    background: rgba(255,255,255,0.9);
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* === ИСПРАВЛЕННЫЕ КЛИЕНТЫ === */
+.clients-section {
+    padding: 60px 0;
+    background: #f0f4f8;
+}
+
+.clients-section h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 40px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.client-logo {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    transition: all 0.3s;
+}
+
+.client-logo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+    
+    .group-text {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .banner-subtitle {
+        font-size: 16px;
+        letter-spacing: 6px;
+    }
+    
+    .banner-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .russia-map-simple {
+        height: 300px;
+    }
+    
+    .point-label {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+}
