@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azzurro Trade - Яхтенный сервис</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg width="200" height="50" viewBox="0 0 200 50">
+                    <rect width="200" height="50" fill="#003366" rx="5"/>
+                    <text x="20" y="32" fill="#FF6B35" font-family="Arial" font-size="20" font-weight="bold">AZZURRO</text>
+                    <text x="110" y="32" fill="#FFFFFF" font-family="Arial" font-size="16">TRADE</text>
+                </svg>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="active">Главная</a>
+                <a href="service.html">Сервис</a>
+                <a href="engineering.html">Проектирование</a>
+                <a href="brokerage.html">Брокераж</a>
+                <a href="supply.html">Снабжение</a>
+                <a href="emergency.html" class="emergency-link">Срочный выезд</a>
+            </nav>
+            <div class="contacts">
+                <a href="tel:+79780882345" class="phone">+7 (978) 088-23-45</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Комплексный яхтенный сервис по всей России</h1>
+                <p class="subtitle">Проектирование, обслуживание, снабжение и брокераж яхт</p>
+                <div class="hero-buttons">
+                    <a href="#map-section" class="btn btn-primary">Найти ближайший сервис</a>
+                    <a href="emergency.html" class="btn btn-emergency">Срочный выезд</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="map-section" class="map-section">
+            <div class="container">
+                <h2>География присутствия</h2>
+                <div class="russia-map">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Map_of_Russia_-_Geographic_Mountains_rivers_lakes_en.svg/1200px-Map_of_Russia_-_Geographic_Mountains_rivers_lakes_en.svg.png" alt="Карта России" class="map-bg">
+                    
+                    <!-- Севастополь -->
+                    <div class="city-marker" style="left: 15%; top: 65%;" data-city="sevastopol">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Севастополь</div>
+                        <div class="marker-popup">
+                            <h3>Главный офис</h3>
+                            <p>+7 (978) 088-23-45</p>
+                            <a href="#" class="popup-link">Подробнее</a>
+                        </div>
+                    </div>
+
+                    <!-- Сочи -->
+                    <div class="city-marker" style="left: 12%; top: 70%;" data-city="sochi">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Сочи</div>
+                        <div class="marker-popup">
+                            <h3>Сервисный центр</h3>
+                            <p>+7 (862) 000-00-00</p>
+                        </div>
+                    </div>
+
+                    <!-- Москва -->
+                    <div class="city-marker" style="left: 25%; top: 40%;" data-city="moscow">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Москва</div>
+                        <div class="marker-popup">
+                            <h3>Представительство</h3>
+                            <p>+7 (495) 000-00-00</p>
+                        </div>
+                    </div>
+
+                    <!-- Санкт-Петербург -->
+                    <div class="city-marker" style="left: 22%; top: 25%;" data-city="spb">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Санкт-Петербург</div>
+                        <div class="marker-popup">
+                            <h3>Сервисный центр</h3>
+                            <p>+7 (812) 000-00-00</p>
+                        </div>
+                    </div>
+
+                    <!-- Владивосток -->
+                    <div class="city-marker" style="left: 85%; top: 70%;" data-city="vladivostok">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Владивосток</div>
+                        <div class="marker-popup">
+                            <h3>Филиал</h3>
+                            <p>+7 (423) 000-00-00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-preview">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="services-grid">
+                    <a href="service.html" class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3>Сервисное обслуживание</h3>
+                        <p>Ремонт двигателей, оборудования, консервация</p>
+                    </a>
+                    <a href="engineering.html" class="service-card">
+                        <div class="service-icon">📐</div>
+                        <h3>Проектирование</h3>
+                        <p>Инжиниринг, модернизация, дизайн интерьеров</p>
+                    </a>
+                    <a href="brokerage.html" class="service-card">
+                        <div class="service-icon">⚓</div>
+                        <h3>Брокераж</h3>
+                        <p>Покупка, продажа, оценка яхт</p>
+                    </a>
+                    <a href="supply.html" class="service-card">
+                        <div class="service-icon">📦</div>
+                        <h3>Снабжение</h3>
+                        <p>Запчасти, оборудование, расходники</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>Тел: +7 (978) 088-23-45</p>
+                    <p>Email: trade@azzurro-online.com</p>
+                    <p>Севастополь, Крым</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Мы в соцсетях</h4>
+                    <a href="https://vk.com/azzurrogroup" target="_blank" class="social-link">VK</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Azzurro Trade. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
