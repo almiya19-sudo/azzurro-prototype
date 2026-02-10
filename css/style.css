@@ -1,860 +1,233 @@
-/* === БАЗОВЫЕ СТИЛИ === */
-:root {
-    --primary-blue: #003366;
-    --accent-orange: #FF6B35;
-    --white: #FFFFFF;
-    --light-gray: #F5F5F5;
-    --dark-gray: #333333;
-    --text-gray: #666666;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--dark-gray);
-    background-color: var(--white);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* === ШАПКА === */
-.header {
-    background-color: var(--primary-blue);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.nav {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.nav a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.nav a:hover,
-.nav a.active {
-    color: var(--accent-orange);
-}
-
-.nav a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--accent-orange);
-}
-
-.emergency-link {
-    color: var(--accent-orange) !important;
-    font-weight: bold;
-}
-
-.phone {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* === ГЛАВНАЯ СТРАНИЦА === */
-.hero {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, #004080 100%);
-    color: var(--white);
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.subtitle {
-    font-size: 24px;
-    margin-bottom: 40px;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.btn-primary {
-    background-color: var(--accent-orange);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: #e55a2b;
-    transform: translateY(-2px);
-}
-
-.btn-emergency {
-    background-color: #dc3545;
-    color: var(--white);
-}
-
-.btn-emergency:hover {
-    background-color: #c82333;
-}
-
-/* === КАРТА === */
-.map-section {
-    padding: 80px 0;
-    background-color: var(--light-gray);
-}
-
-.map-section h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: var(--primary-blue);
-}
-
-.russia-map {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    aspect-ratio: 2.5/1;
-}
-
-.map-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 0.3;
-}
-
-.city-marker {
-    position: absolute;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.marker-dot {
-    width: 20px;
-    height: 20px;
-    background-color: var(--accent-orange);
-    border-radius: 50%;
-    border: 3px solid var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-.marker-label {
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--primary-blue);
-    color: var(--white);
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.city-marker:hover .marker-label {
-    opacity: 1;
-}
-
-.marker-popup {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--white);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
-    z-index: 20;
-}
-
-.city-marker:hover .marker-popup {
-    opacity: 1;
-    visibility: visible;
-}
-
-.marker-popup h3 {
-    color: var(--primary-blue);
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.marker-popup p {
-    color: var(--text-gray);
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.popup-link {
-    color: var(--accent-orange);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* === УСЛУГИ === */
-.services-preview {
-    padding: 80px 0;
-}
-
-.services-preview h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 50px;
-    color: var(--primary-blue);
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background-color: var(--white);
-    padding: 40px 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-decoration: none;
-    color: inherit;
-    border-top: 4px solid var(--accent-orange);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.service-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.service-card p {
-    color: var(--text-gray);
-}
-
-/* === ВНУТРЕННИЕ СТРАНИЦЫ === */
-.page-hero {
-    background-color: var(--primary-blue);
-    color: var(--white);
-    padding: 60px 0;
-    text-align: center;
-}
-
-.page-hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.page-hero p {
-    font-size: 20px;
-    opacity: 0.9;
-}
-
-.services-detail,
-.engineering-services,
-.brokerage-services,
-.supply-categories {
-    padding: 60px 0;
-}
-
-.service-types,
-.eng-grid,
-.brokerage-grid,
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.service-item,
-.eng-card,
-.brokerage-card,
-.category-card {
-    background-color: var(--light-gray);
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 4px solid var(--accent-orange);
-}
-
-.service-item h3,
-.eng-card h3,
-.brokerage-card h3,
-.category-card h3 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-}
-
-.service-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.service-item li {
-    padding: 8px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.service-item li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: var(--accent-orange);
-    font-weight: bold;
-}
-
-/* === СТРАНИЦА ЭКСТРЕННОГО ВЫЕЗДА === */
-.emergency-hero {
-    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-    color: var(--white);
-    padding: 80px 0;
-    text-align: center;
-}
-
-.emergency-badge {
-    display: inline-block;
-    background-color: var(--white);
-    color: #dc3545;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    animation: blink 1.5s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
-}
-
-.emergency-phone {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 20px 0;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.emergency-subtitle {
-    font-size: 20px;
-    opacity: 0.9;
-}
-
-.emergency-services {
-    padding: 60px 0;
-    background-color: var(--light-gray);
-}
-
-.emergency-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.emergency-item {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.emergency-icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-}
-
-.emergency-item h3 {
-    color: var(--primary-blue);
-    margin-bottom: 10px;
-}
-
-.emergency-form-section {
-    background-color: var(--white);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.emergency-form-section h2 {
-    text-align: center;
-    color: var(--primary-blue);
-    margin-bottom: 30px;
-}
-
-.emergency-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.emergency-form input,
-.emergency-form select,
-.emergency-form textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.btn-emergency-large {
-    background-color: #dc3545;
-    color: var(--white);
-    font-size: 18px;
-    padding: 18px;
-    margin-top: 10px;
-}
-
-.btn-emergency-large:hover {
-    background-color: #c82333;
-}
-
-/* === ФОРМЫ === */
-.simple-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: 30px auto;
-}
-
-.simple-form input,
-.simple-form textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* === ПОДВАЛ === */
-.footer {
-    background-color: var(--primary-blue);
-    color: var(--white);
-    padding: 50px 0 20px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    margin-bottom: 30px;
-}
-
-.footer-section h4 {
-    color: var(--accent-orange);
-    margin-bottom: 15px;
-}
-
-.social-link {
-    color: var(--white);
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.social-link:hover {
-    background-color: var(--accent-orange);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    opacity: 0.8;
-}
-
-.emergency-footer {
-    background-color: #dc3545;
-}
-
-.big-phone {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-/* === АДАПТИВНОСТЬ === */
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav {
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .subtitle {
-        font-size: 18px;
-    }
-
-    .page-hero h1 {
-        font-size: 28px;
-    }
-
-    .emergency-phone {
-        font-size: 32px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .russia-map {
-        aspect-ratio: 1/1;
-    }
-
-    .city-marker {
-        transform: scale(0.8);
-    }
-}
-
-@media (max-width: 480px) {
-    .services-grid,
-    .service-types,
-    .eng-grid,
-    .brokerage-grid,
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 60px 0;
-    }
-
-    .map-section,
-    .services-preview {
-        padding: 40px 0;
-    }
-}
-
-/* === AI ЧАТ ВИДЖЕТ (placeholder) === */
-.ai-chat-widget {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: var(--accent-orange);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 9999;
-    transition: transform 0.3s;
-}
-
-.ai-chat-widget:hover {
-    transform: scale(1.1);
-}
-
-.ai-chat-widget::after {
-    content: '🤖';
-    font-size: 28px;
-}
-/* === НОВЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ === */
-
-/* Баннер */
+/* === ИСПРАВЛЕННЫЙ БАННЕР === */
 .hero-banner {
     background: linear-gradient(135deg, #003366 0%, #002244 100%);
     color: white;
-    padding: 80px 0;
+    padding: 60px 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23FF6B35" stroke-width="0.5" opacity="0.1"/></svg>');
-    background-size: 100px;
-    opacity: 0.3;
 }
 
 .banner-content {
-    position: relative;
-    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .banner-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 72px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 64px;
     font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: 4px;
+    margin-bottom: 15px;
+    letter-spacing: 6px;
+    line-height: 1.2;
 }
 
 .azzurro-text {
     color: #FFFFFF;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .group-text {
     color: #FF6B35;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .banner-subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 28px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 24px;
     font-weight: 600;
-    letter-spacing: 8px;
+    letter-spacing: 12px;
     color: #FFFFFF;
-    margin-bottom: 50px;
-    opacity: 0.95;
+    margin-bottom: 40px;
+    opacity: 0.9;
 }
 
 .banner-features {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
+    gap: 15px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: left;
 }
 
 .feature-item {
-    font-size: 18px;
-    padding: 15px 20px;
+    font-size: 16px;
+    padding: 12px 20px;
     background: rgba(255,255,255,0.1);
-    border-radius: 8px;
-    border-left: 4px solid #FF6B35;
-    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    border-left: 3px solid #FF6B35;
 }
 
-/* Статистика */
+/* === СТАТИСТИКА (компактнее) === */
 .stats-section {
-    padding: 60px 0;
+    padding: 40px 0;
     background: #f8f9fa;
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px;
     text-align: center;
 }
 
 .stat-item {
-    padding: 30px;
+    padding: 20px;
 }
 
 .stat-number {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 800;
     color: #003366;
     line-height: 1;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .stat-label {
-    font-size: 18px;
+    font-size: 16px;
     color: #666;
-    font-weight: 500;
 }
 
-/* SVG Карта */
+/* === ИСПРАВЛЕННАЯ КАРТА === */
 .map-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background: white;
+    text-align: center;
 }
 
 .map-section h2 {
-    text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     color: #003366;
     margin-bottom: 10px;
 }
 
 .map-subtitle {
-    text-align: center;
     color: #666;
-    margin-bottom: 40px;
-    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.russia-map-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    padding: 20px;
-}
-
-.russia-svg {
+.russia-map-simple {
+    position: relative;
     width: 100%;
-    height: auto;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f5f5f5 100%);
+    border-radius: 15px;
+    border: 2px solid #003366;
+    overflow: hidden;
+}
+
+.russia-map-simple::before {
+    content: 'РОССИЯ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: rgba(0,51,102,0.05);
+    font-weight: 800;
+    letter-spacing: 20px;
 }
 
 .map-point {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     cursor: pointer;
-    transition: all 0.3s;
-    animation: pulse-map 2s infinite;
+    z-index: 10;
 }
 
-.map-point:hover {
-    r: 12;
-    fill: #FF6B35 !important;
+.point-marker {
+    width: 12px;
+    height: 12px;
+    background: #003366;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
 }
 
-@keyframes pulse-map {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+.point-marker.main-point {
+    width: 16px;
+    height: 16px;
+    background: #FF6B35;
 }
 
-/* Клиенты */
+.point-label {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #003366;
+    font-weight: 600;
+    background: rgba(255,255,255,0.9);
+    padding: 2px 6px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* === ИСПРАВЛЕННЫЕ КЛИЕНТЫ === */
 .clients-section {
-    padding: 80px 0;
+    padding: 60px 0;
     background: #f0f4f8;
 }
 
 .clients-section h2 {
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     color: #003366;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
 .client-logo {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px;
-    transition: transform 0.3s;
+    height: 100px;
+    transition: all 0.3s;
 }
 
 .client-logo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
 .client-logo img {
     max-width: 100%;
-    max-height: 80px;
+    max-height: 70px;
     object-fit: contain;
-    filter: grayscale(30%);
-    transition: filter 0.3s;
 }
 
-.client-logo:hover img {
-    filter: grayscale(0%);
-}
-
-/* Адаптивность новых блоков */
-@media (max-width: 968px) {
+/* Адаптивность */
+@media (max-width: 768px) {
     .banner-title {
-        font-size: 48px;
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+    
+    .group-text {
+        display: block;
+        margin-left: 0;
+        margin-top: 10px;
     }
     
     .banner-subtitle {
-        font-size: 20px;
-        letter-spacing: 4px;
+        font-size: 16px;
+        letter-spacing: 6px;
     }
     
     .banner-features {
@@ -868,26 +241,19 @@ body {
     .clients-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    .russia-map-simple {
+        height: 300px;
+    }
+    
+    .point-label {
+        font-size: 9px;
+    }
 }
 
 @media (max-width: 480px) {
-    .banner-title {
-        font-size: 32px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .group-text {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-    
     .stats-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .stat-number {
-        font-size: 40px;
     }
     
     .clients-grid {
