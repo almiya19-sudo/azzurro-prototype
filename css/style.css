@@ -640,3 +640,257 @@ body {
     content: '🤖';
     font-size: 28px;
 }
+/* === НОВЫЕ СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ === */
+
+/* Баннер */
+.hero-banner {
+    background: linear-gradient(135deg, #003366 0%, #002244 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23FF6B35" stroke-width="0.5" opacity="0.1"/></svg>');
+    background-size: 100px;
+    opacity: 0.3;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.azzurro-text {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.group-text {
+    color: #FF6B35;
+    margin-left: 20px;
+}
+
+.banner-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+
+.banner-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.feature-item {
+    font-size: 18px;
+    padding: 15px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    border-left: 4px solid #FF6B35;
+    backdrop-filter: blur(10px);
+}
+
+/* Статистика */
+.stats-section {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 30px;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #003366;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 18px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* SVG Карта */
+.map-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.map-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.map-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.russia-map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.russia-svg {
+    width: 100%;
+    height: auto;
+}
+
+.map-point {
+    cursor: pointer;
+    transition: all 0.3s;
+    animation: pulse-map 2s infinite;
+}
+
+.map-point:hover {
+    r: 12;
+    fill: #FF6B35 !important;
+}
+
+@keyframes pulse-map {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Клиенты */
+.clients-section {
+    padding: 80px 0;
+    background: #f0f4f8;
+}
+
+.clients-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 50px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.client-logo {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    transition: transform 0.3s;
+}
+
+.client-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.client-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: filter 0.3s;
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/* Адаптивность новых блоков */
+@media (max-width: 968px) {
+    .banner-title {
+        font-size: 48px;
+    }
+    
+    .banner-subtitle {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+    
+    .banner-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-title {
+        font-size: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .group-text {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 40px;
+    }
+    
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+}
